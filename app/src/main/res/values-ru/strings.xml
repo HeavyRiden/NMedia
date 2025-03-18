@@ -2,4 +2,5 @@
 <resources>
     <string name="nmedia">НМедиа!</string>
     <string name="app_name">НМедиа</string>
+    <string name="logo">логотип</string>
 </resources>
