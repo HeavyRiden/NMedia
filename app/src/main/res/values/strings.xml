@@ -3,4 +3,10 @@
     <string name="app_name">NMedia</string>
     <string name="description_post_avatar">Post author avatar</string>
     <string name="description_post_menu">Post menu</string>
+    <string name="post_like">like button</string>
+    <string name="count_of_likes" translatable="false">14</string>
+    <string name="post_share">post share button</string>
+    <string name="count_of_shares" translatable="false">150</string>
+    <string name="count_of_viewers" translatable="false">666</string>
+    <string name="post_viewers">post viewers</string>
 </resources>
