@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
+    android:padding="@dimen/common_spacing"
     tools:context=".MainActivity">
 
 
@@ -47,7 +47,7 @@
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
         android:contentDescription="@string/description_post_menu"
-        android:src="@drawable/baseline_more_vert_24"
+        tools:src="@drawable/baseline_more_vert_24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -83,7 +83,7 @@
         android:contentDescription="@string/post_like"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/barrierBottom"
-        app:srcCompat="@drawable/ic_like" />
+        tools:srcCompat="@drawable/ic_like" />
 
     <TextView
         android:id="@+id/likeCount"
@@ -105,7 +105,7 @@
         android:contentDescription="@string/post_share"
         app:layout_constraintStart_toEndOf="@id/likeCount"
         app:layout_constraintTop_toBottomOf="@id/barrierBottom"
-        app:srcCompat="@drawable/ic_share" />
+        tools:srcCompat="@drawable/ic_share" />
 
     <TextView
         android:id="@+id/shareCount"
@@ -113,7 +113,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/text_spacing"
         android:layout_marginTop="@dimen/common_spacing"
-        android:text="@string/count_of_shares"
+        tools:text="@string/count_of_shares"
         app:layout_constraintStart_toEndOf="@id/share"
         app:layout_constraintTop_toBottomOf="@id/barrierBottom" />
 
@@ -127,7 +127,7 @@
         android:contentDescription="@string/post_viewers"
         app:layout_constraintEnd_toStartOf="@id/viewsCount"
         app:layout_constraintTop_toBottomOf="@id/barrierBottom"
-        app:srcCompat="@drawable/ic_views" />
+        tools:srcCompat="@drawable/ic_views" />
 
     <TextView
         android:id="@+id/viewsCount"
@@ -135,7 +135,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/text_spacing"
         android:layout_marginTop="@dimen/common_spacing"
-        android:text="@string/count_of_viewers"
+        tools:text="@string/count_of_viewers"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/barrierBottom" />
 
