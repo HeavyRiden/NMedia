@@ -1,21 +1,23 @@
 package ru.netology.nmedia
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import ru.netology.nmedia.databinding.ActivityMainBinding
 import ru.netology.nmedia.dto.Post
+import ru.netology.nmedia.dto.numLogic
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        var countLong: Long = 9_991_999
 
         val post = Post(
             id = 1,
             author = "Автор поста",
-            content = "Соедржимое поста",
+            content = "Содержимое поста",
             published = "22.03.2025",
             likeByMe = false
         )
@@ -27,7 +29,7 @@ class MainActivity : AppCompatActivity() {
 
             avatar.setImageResource(R.drawable.post_avatar_drawable)
 
-            var shareCountLong: Long = 0
+
 
             like.setImageResource(R.drawable.ic_like)
             likeCount.text = "0"
@@ -44,15 +46,16 @@ class MainActivity : AppCompatActivity() {
             }
 
             share.setImageResource(R.drawable.ic_share)
-            shareCount.text = shareCountLong.toString()
+            shareCount.text = numLogic(countLong)
             share.setOnClickListener {
-                shareCountLong ++
-                shareCount.text = shareCountLong.toString()
+                countLong ++
+                shareCount.text = numLogic(countLong)
+                viewsCount.text = numLogic(countLong)
 
             }
 
             views.setImageResource(R.drawable.ic_views)
-            viewsCount.text = "0"
+            viewsCount.text = numLogic(countLong)
         }
     }
 }
