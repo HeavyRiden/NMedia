@@ -12,7 +12,8 @@ class MainActivity : AppCompatActivity() {
 
         val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        var countLong: Long = 9_991_999
+        var countShare: Long = 9_999
+        var countLikes: Long = 9
 
         val post = Post(
             id = 1,
@@ -29,15 +30,16 @@ class MainActivity : AppCompatActivity() {
 
             avatar.setImageResource(R.drawable.post_avatar_drawable)
 
-
-
             like.setImageResource(R.drawable.ic_like)
-            likeCount.text = "0"
+            likeCount.text = numLogic(countLikes)
+
             like.setOnClickListener {
                 post.likeByMe = !post.likeByMe
 
-                if(post.likeByMe) likeCount.text = "1"
-                else likeCount.text = "0"
+                if (post.likeByMe) countLikes++
+                else countLikes--
+
+                likeCount.text = numLogic(countLikes)
 
                 like.setImageResource(
                     if (post.likeByMe) R.drawable.ic_liked_24
@@ -46,16 +48,16 @@ class MainActivity : AppCompatActivity() {
             }
 
             share.setImageResource(R.drawable.ic_share)
-            shareCount.text = numLogic(countLong)
+            shareCount.text = numLogic(countShare)
             share.setOnClickListener {
-                countLong ++
-                shareCount.text = numLogic(countLong)
-                viewsCount.text = numLogic(countLong)
+                countShare++
+                shareCount.text = numLogic(countShare)
+                viewsCount.text = numLogic(countShare)
 
             }
 
             views.setImageResource(R.drawable.ic_views)
-            viewsCount.text = numLogic(countLong)
+            viewsCount.text = numLogic(countShare)
         }
     }
 }
