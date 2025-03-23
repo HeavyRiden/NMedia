@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
             author = "Автор поста",
             content = "Содержимое поста",
             published = "22.03.2025",
-            likeByMe = false
+            likeByMe = true
         )
 
         with(binding) {
@@ -30,7 +30,10 @@ class MainActivity : AppCompatActivity() {
 
             avatar.setImageResource(R.drawable.post_avatar_drawable)
 
-            like.setImageResource(R.drawable.ic_like)
+            like.setImageResource(
+                if (post.likeByMe) R.drawable.ic_liked_24
+                else R.drawable.ic_like
+            )
             likeCount.text = numLogic(countLikes)
 
             like.setOnClickListener {
