@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace 'ru.netology.nmedia'
-    compileSdk 34
+    compileSdk 35
 
     defaultConfig {
         applicationId "ru.netology.nmedia"
@@ -35,6 +35,25 @@ android {
 }
 
 dependencies {
+    def core_version = "1.15.0"
+    def appcompat_version = "1.7.0"
+    def mdc_version = "1.12.0"
+    def constraintlayout_version = "2.2.1"
+    def recyclerview_version = "1.4.0"
+    def junit_version = "4.13.2"
+    def ext_junit_version = "1.2.1"
+    def espresso_core_version = "3.6.1"
+    def activity_version = "1.10.1"
+    def lifecycle_version = "2.8.7"
+
+    implementation "androidx.core:core-ktx:$core_version"
+    implementation "androidx.appcompat:appcompat:$appcompat_version"
+    implementation "com.google.android.material:material:$mdc_version"
+    implementation "androidx.constraintlayout:constraintlayout:$constraintlayout_version"
+    implementation "androidx.recyclerview:recyclerview:$recyclerview_version"
+    implementation "androidx.activity:activity-ktx:$activity_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
 
     implementation libs.androidx.core.ktx
     implementation libs.androidx.appcompat
