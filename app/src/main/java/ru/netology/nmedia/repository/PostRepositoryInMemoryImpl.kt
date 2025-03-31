@@ -3,6 +3,7 @@ package ru.netology.nmedia.repository
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import ru.netology.nmedia.dto.Post
+import java.util.Calendar
 
 class PostRepositoryInMemoryImp : PostRepository {
 
@@ -132,6 +133,29 @@ class PostRepositoryInMemoryImp : PostRepository {
             if (it.id != id) it
             else {
                 it.copy(countViews = it.countViews + 1)
+            }
+        }
+        data.value = posts
+    }
+
+    override fun removeById(id: Long) {
+        posts = posts.filter { it.id != id }
+        data.value = posts
+    }
+
+    override fun save(post: Post) {
+        posts = if (post.id == 0L) {
+            listOf(
+                post.copy(
+                    id = posts.last().id + 1,
+                    author = "Мой новый пост",
+                    published = Calendar.getInstance().time.toString()
+                )
+            ) + posts
+        } else {
+            posts.map {
+                if (it.id != post.id) it
+                else it.copy(content = post.content)
             }
         }
         data.value = posts

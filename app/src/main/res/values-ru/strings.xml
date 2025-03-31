@@ -7,4 +7,9 @@
     <string name="post_like">Кнопка лайк</string>
     <string name="post_share">Кнопка поделиться</string>
     <string name="post_viewers">Количество посмотревших пост</string>
+    <string name="menu_remove">Удаление поста</string>
+    <string name="save_button">Сохранить пост</string>
+    <string name="post_text">Текст поста</string>
+    <string name="empty_text">Нет текста</string>
+    <string name="menu_edit">Редактировать</string>
 </resources>

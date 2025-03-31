@@ -9,4 +9,10 @@
     <string name="count_of_shares" translatable="false">150</string>
     <string name="count_of_viewers" translatable="false">666</string>
     <string name="post_viewers">post viewers</string>
+    <string name="menu_remove">remove</string>
+    <string name="save_button">save</string>
+    <string name="post_text">post text</string>
+    <string name="empty_text">empty text</string>
+    <string name="menu_edit">menu edit</string>
+
 </resources>
