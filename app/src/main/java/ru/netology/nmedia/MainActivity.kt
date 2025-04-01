@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity() {
 
         viewModel.edited.observe(this) {
             if (it.id != 0L) {
-                binding.editionText.setText(it.content)
+                binding.editionText.text = it.content
                 binding.editionGroup.visibility = View.VISIBLE
             }
             else
