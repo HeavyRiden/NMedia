@@ -40,4 +40,5 @@ class PostViewModel: ViewModel() {
         }
         edited.value = empty
     }
+
 }

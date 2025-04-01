@@ -12,4 +12,5 @@
     <string name="post_text">Текст поста</string>
     <string name="empty_text">Нет текста</string>
     <string name="menu_edit">Редактировать</string>
+    <string name="edition_text">Редактируемый текст</string>
 </resources>

@@ -14,5 +14,7 @@
     <string name="post_text">post text</string>
     <string name="empty_text">empty text</string>
     <string name="menu_edit">menu edit</string>
+    <string name="edition_text">Edit message</string>
+
 
 </resources>
