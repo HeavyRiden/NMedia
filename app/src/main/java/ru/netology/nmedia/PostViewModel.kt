@@ -41,4 +41,8 @@ class PostViewModel: ViewModel() {
         edited.value = empty
     }
 
+    fun reverseEdit() {
+        edited.value = empty
+    }
+
 }

@@ -53,6 +53,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.revertEdit.setOnClickListener {
+            viewModel.reverseEdit()
             binding.content.setText("")
             binding.content.clearFocus()
             binding.editionGroup.visibility = View.INVISIBLE
@@ -66,13 +67,13 @@ class MainActivity : AppCompatActivity() {
                 binding.content.requestFocus()
             }
         }
+        
         binding.add.setOnClickListener {
             val text = binding.content.text.toString()
             if(text.isEmpty()) {
                 Toast.makeText(this, R.string.empty_text, Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
-
 
             viewModel.changeContentAndSave(text)
             binding.content.setText("")
