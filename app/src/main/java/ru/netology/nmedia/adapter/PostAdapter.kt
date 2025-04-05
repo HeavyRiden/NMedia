@@ -54,11 +54,12 @@ class PostViewHolder(
             isChecked = post.likedByMe
             text = post.countLikes.toString()
         }
+        share.apply {
+            text = post.countShare.toString()
+        }
 
         avatar.setImageResource(R.drawable.post_avatar_drawable)
 
-        share.setImageResource(R.drawable.ic_share)
-        shareCount.text = numLogic(post.countShare)
 
         views.setImageResource(R.drawable.ic_views)
         viewsCount.text = numLogic(post.countViews)

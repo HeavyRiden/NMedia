@@ -5,4 +5,5 @@
         <item name="iconTint">@color/color_like_selector</item>
         <item name="iconPadding">-8dp</item>
     </style>
+
 </resources>
